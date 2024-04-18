@@ -10,4 +10,4 @@ pip3 install -r requirements.txt
 python runner.py
 ```
 
-#### Thanks to pygame community. https://www.pygame.org/contribute.html
+#### Thanks to the PYGAME community. https://www.pygame.org/contribute.html
