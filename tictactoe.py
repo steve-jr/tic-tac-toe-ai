@@ -65,3 +65,24 @@ def result(board, action):
     turn = player(board)
     new_board[i][j] = turn
     return new_board
+
+
+def winner(board):
+    """
+    Returns the winner of the game, if there is one.
+
+    Args:
+    board (list of list): Current board state
+
+    Returns:
+    str: 'X' if X wins, 'O' if O wins, None otherwise
+    """
+    # Check rows, columns, and diagonals for a winner
+    lines = board + [list(x) for x in zip(*board)] + [[board[i][i] for i in range(3)],
+                                                      [board[i][2 - i] for i in range(3)]]
+    for line in lines:
+        if line == ['X', 'X', 'X']:
+            return 'X'
+        if line == ['O', 'O', 'O']:
+            return 'O'
+    return None
