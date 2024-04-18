@@ -46,3 +46,22 @@ def actions(board):
     set: Set of tuples representing all empty positions where a move can be made
     """
     return {(i, j) for i in range(3) for j in range(3) if board[i][j] == EMPTY}
+
+
+def result(board, action):
+    """
+    Returns the board that results from making move (i, j) on the board.
+
+    Args:
+    board (list of list): Current board state
+    action (tuple): A tuple (i, j) indicating the next move
+
+    Returns:
+    list of list: New board state after the move
+    """
+    import copy
+    new_board = copy.deepcopy(board)
+    i, j = action
+    turn = player(board)
+    new_board[i][j] = turn
+    return new_board
