@@ -33,3 +33,16 @@ def player(board):
     x_moves = sum(row.count('X') for row in board)
     o_moves = sum(row.count('O') for row in board)
     return 'O' if x_moves > o_moves else 'X'
+
+
+def actions(board):
+    """
+    Returns set of all possible actions (i, j) available on the board.
+
+    Args:
+    board (list of list): Current board state
+
+    Returns:
+    set: Set of tuples representing all empty positions where a move can be made
+    """
+    return {(i, j) for i in range(3) for j in range(3) if board[i][j] == EMPTY}
