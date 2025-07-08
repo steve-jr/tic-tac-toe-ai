@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -61,7 +61,7 @@ body::after {
 }
 
 h1 {
-    color: #5f27cd;
+    color: #00695c;
     margin-bottom: 1.5rem;
     font-size: 2.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -74,7 +74,7 @@ h1 {
 
 /* Player Selection */
 .player-selection h2 {
-    color: #341f97;
+    color: #004d40;
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
 }
@@ -156,7 +156,7 @@ h1 {
 /* AI Thinking Indicator */
 .ai-thinking {
     font-style: italic;
-    color: #5f27cd;
+    color: #00897b;
     margin-bottom: 0.8rem;
     font-weight: 500;
     animation: pulse 1.5s infinite;
@@ -175,10 +175,10 @@ h1 {
     grid-template-rows: repeat(3, 110px);
     gap: 8px;
     margin: 0 auto 2rem;
-    background: linear-gradient(135deg, #5f27cd 0%, #341f97 100%);
+    background: linear-gradient(135deg, #00695c 0%, #004d40 100%);
     padding: 8px;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(95, 39, 205, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 105, 92, 0.3);
 }
 
 .cell {
@@ -260,20 +260,20 @@ h1 {
     padding: 1rem 2rem;
     font-size: 1.1rem;
     font-weight: bold;
-    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    background: linear-gradient(135deg, #26a69a 0%, #66bb6a 100%);
     color: white;
     border: none;
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+    box-shadow: 0 5px 15px rgba(38, 166, 154, 0.4);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .restart-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(108, 92, 231, 0.5);
+    box-shadow: 0 8px 20px rgba(38, 166, 154, 0.5);
 }
 
 /* Modal */
@@ -326,7 +326,7 @@ h1 {
 }
 
 .modal-content strong {
-    color: #5f27cd;
+    color: #00695c;
 }
 
 .modal-buttons {
@@ -360,14 +360,14 @@ h1 {
 }
 
 .modal-btn.secondary {
-    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    background: linear-gradient(135deg, #00897b 0%, #00acc1 100%);
     color: white;
-    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 137, 123, 0.4);
 }
 
 .modal-btn.secondary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(108, 92, 231, 0.5);
+    box-shadow: 0 8px 20px rgba(0, 137, 123, 0.5);
 }
 
 /* Responsive Design */
@@ -375,31 +375,31 @@ h1 {
     .container {
         padding: 1.5rem;
     }
-    
+
     h1 {
         font-size: 2rem;
     }
-    
+
     .board {
         grid-template-columns: repeat(3, 90px);
         grid-template-rows: repeat(3, 90px);
         gap: 6px;
         padding: 6px;
     }
-    
+
     .cell {
         font-size: 2.5rem;
     }
-    
+
     .symbol-buttons {
         flex-direction: column;
     }
-    
+
     .modal-buttons {
         flex-direction: column;
         width: 100%;
     }
-    
+
     .modal-btn {
         width: 100%;
     }
