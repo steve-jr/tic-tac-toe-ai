@@ -223,6 +223,11 @@ async function selectPlayer(symbol) {
         showError(error.message);
         hideAIThinking();
     }
+
+    gtag('event', 'game_start', {
+        'event_category': 'select_player',
+        'event_label': 'user_started_game'
+    });
 }
 
 // Make a move
@@ -320,12 +325,10 @@ function calculateWinRate() {
     return Math.round((stats.wins / totalGames) * 100);
 }
 
-// Show AI thinking indicator
 function showAIThinking() {
     aiThinkingElement.classList.remove('hidden');
 }
 
-// Hide AI thinking indicator
 function hideAIThinking() {
     aiThinkingElement.classList.add('hidden');
 }
@@ -338,8 +341,6 @@ function showError(message) {
 
 // Highlight winning cells (basic implementation)
 function highlightWinningCells() {
-    // This is a simplified version - you might want to enhance this
-    // to actually detect the winning line based on your game logic
     const cells = boardElement.querySelectorAll('.cell');
     
     // Check rows
